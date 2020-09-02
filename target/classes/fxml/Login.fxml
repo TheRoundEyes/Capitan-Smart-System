@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="loginPane" prefHeight="768.0" prefWidth="1366.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.circuit.main.Main">
+    <stylesheets>
+        <URL value="@/styles/Styles.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane prefHeight="768.0" prefWidth="888.0" style="-fx-background-color: #20293c;">
+         <children>
+            <ImageView fitHeight="239.0" fitWidth="226.0" layoutX="355.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/city-logo.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="61.0" layoutY="325.0" prefHeight="90.0" prefWidth="815.0" text="Welcome to Capitan" textFill="WHITE">
+               <font>
+                  <Font name="Ubuntu" size="60.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="71.0" layoutY="415.0" prefHeight="59.0" prefWidth="796.0" text="Smart system. Superior leadership." textFill="WHITE">
+               <font>
+                  <Font name="Ubuntu" size="40.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="888.0" prefHeight="768.0" prefWidth="478.0">
+         <children>
+            <Pane id="credPaneEdit" layoutX="11.0" layoutY="104.0" prefHeight="538.0" prefWidth="456.0" style="-fx-border-color: #000000;">
+               <children>
+                  <ImageView id="loginPagePic" fitHeight="135.0" fitWidth="134.0" layoutX="172.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/avatar_2x.png" />
+                     </image>
+                  </ImageView>
+                  <JFXTextField fx:id="usernameInput" layoutX="126.0" layoutY="187.0" prefHeight="41.0" prefWidth="226.0" promptText="Username" unFocusColor="#050505">
+                     <font>
+                        <Font name="Ubuntu Light" size="20.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXPasswordField fx:id="passwordInput" layoutX="127.0" layoutY="234.0" prefHeight="35.0" prefWidth="226.0" promptText="Password">
+                     <font>
+                        <Font name="Ubuntu Light" size="20.0" />
+                     </font>
+                  </JFXPasswordField>
+                  <JFXButton id="capitanBtn" fx:id="loginBtn" layoutX="159.0" layoutY="280.0" onAction="#loginAccount" prefHeight="52.0" prefWidth="163.0" text="Login">
+                     <font>
+                        <Font name="Ubuntu" size="28.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

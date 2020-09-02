@@ -1,0 +1,1035 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="createNew" prefHeight="768.0" prefWidth="1366.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.circuit.main.RegisterController">
+    <stylesheets>
+        <URL value="@/styles/Styles.css" />
+    </stylesheets>
+   <children>
+      <Pane layoutX="322.0" prefHeight="217.0" prefWidth="1045.0">
+         <children>
+            <ImageView fitHeight="194.0" fitWidth="155.0" layoutX="445.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/city-logo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="749.0" layoutY="35.0" text="Date:">
+               <font>
+                  <Font name="Ubuntu" size="15.0" />
+               </font></Label>
+            <Label fx:id="date_label" layoutX="826.0" layoutY="28.0" prefHeight="41.0" prefWidth="205.0">
+               <font>
+                  <Font name="Ubuntu" size="15.0" />
+               </font></Label>
+            <JFXComboBox fx:id="registerType" layoutX="169.0" layoutY="171.0" onAction="#regTypePick" prefHeight="37.0" prefWidth="212.0" />
+            <Label layoutX="14.0" layoutY="177.0" prefHeight="24.0" prefWidth="155.0" text="Type Of Registration:">
+               <font>
+                  <Font name="Ubuntu" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="749.0" layoutY="93.0" text="Time :">
+               <font>
+                  <Font name="Ubuntu" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="time_label" layoutX="826.0" layoutY="86.0" prefHeight="41.0" prefWidth="205.0">
+               <font>
+                  <Font name="Ubuntu" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="clearancePane" layoutX="336.0" layoutY="216.0" prefHeight="546.0" prefWidth="1045.0">
+         <children>
+            <Pane fx:id="brgyPane" layoutY="-2.0" prefHeight="546.0" prefWidth="1045.0">
+               <children>
+                  <TitledPane collapsible="false" layoutX="305.0" layoutY="14.0" prefHeight="273.0" prefWidth="718.0" text="Personal Information">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="214.0" prefWidth="824.0">
+                           <children>
+                              <Label layoutX="21.0" layoutY="21.0" prefHeight="29.0" prefWidth="87.0" text="First Name:">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="firstNameField" layoutX="138.0" layoutY="15.0" prefHeight="20.0" prefWidth="180.0">
+                                 <font>
+                                    <Font name="Ubuntu" size="20.0" />
+                                 </font>
+                              </JFXTextField>
+                              <Label layoutX="21.0" layoutY="66.0" prefHeight="29.0" prefWidth="82.0" text="Last Name:">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="lastNameField" layoutX="138.0" layoutY="61.0" prefHeight="20.0" prefWidth="180.0">
+                                 <font>
+                                    <Font name="Ubuntu" size="20.0" />
+                                 </font>
+                              </JFXTextField>
+                              <Label layoutX="21.0" layoutY="117.0" text="Middle Name:">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="middleNameField" layoutX="138.0" layoutY="106.0" prefHeight="20.0" prefWidth="180.0">
+                                 <font>
+                                    <Font name="Ubuntu" size="20.0" />
+                                 </font>
+                              </JFXTextField>
+                              <Label layoutX="21.0" layoutY="160.0" text="Gender:">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXComboBox fx:id="genderType" layoutX="138.0" layoutY="150.0" prefHeight="37.0" prefWidth="180.0" />
+                              <Label layoutX="21.0" layoutY="204.0" text="Birthdate:">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXDatePicker fx:id="birthDate" layoutX="138.0" layoutY="193.0" prefHeight="37.0" prefWidth="180.0" />
+                              <Label layoutX="332.0" layoutY="27.0" text="City:">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="cityField" layoutX="433.0" layoutY="15.0" prefHeight="38.0" prefWidth="265.0">
+                                 <font>
+                                    <Font name="Ubuntu" size="20.0" />
+                                 </font>
+                              </JFXTextField>
+                              <Label layoutX="332.0" layoutY="72.0" text="Age:">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="ageField" layoutX="433.0" layoutY="61.0" prefHeight="38.0" prefWidth="265.0">
+                                 <font>
+                                    <Font name="Ubuntu" size="20.0" />
+                                 </font>
+                              </JFXTextField>
+                              <Label layoutX="332.0" layoutY="117.0" text="Citizenship:">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="citizenshipField" layoutX="433.0" layoutY="104.0" prefHeight="38.0" prefWidth="265.0">
+                                 <font>
+                                    <Font name="Ubuntu" size="20.0" />
+                                 </font>
+                              </JFXTextField>
+                              <Label layoutX="332.0" layoutY="160.0" text="Address:">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="addressField" layoutX="433.0" layoutY="146.0" prefHeight="38.0" prefWidth="265.0">
+                                 <font>
+                                    <Font name="Ubuntu" size="20.0" />
+                                 </font>
+                              </JFXTextField>
+                              <Label layoutX="332.0" layoutY="200.0" prefHeight="24.0" prefWidth="83.0" text="Civil Status:">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXComboBox fx:id="civilStat" layoutX="435.0" layoutY="198.0" prefHeight="27.0" prefWidth="265.0" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                     <font>
+                        <Font name="Ubuntu" size="15.0" />
+                     </font>
+                  </TitledPane>
+                  <TitledPane animated="false" collapsible="false" layoutX="22.0" layoutY="299.0" prefHeight="225.0" prefWidth="461.0" text="Other Information">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="224.0" prefWidth="570.0">
+                           <children>
+                              <Label layoutX="21.0" layoutY="22.0" text="Remarks:">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="21.0" layoutY="69.0" text="Clearance Purpose:">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXComboBox fx:id="purposeBox" layoutX="165.0" layoutY="62.0" onAction="#purposeItemPick" prefHeight="37.0" prefWidth="265.0" />
+                              <Label layoutX="21.0" layoutY="112.0" text="Barangay:">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="barangayField" disable="true" editable="false" layoutX="164.0" layoutY="107.0" prefHeight="27.0" prefWidth="265.0">
+                                 <font>
+                                    <Font name="Ubuntu" size="20.0" />
+                                 </font>
+                              </JFXTextField>
+                              <Label layoutX="21.0" layoutY="154.0" text="Control No:">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="control_no" layoutX="163.0" layoutY="152.0" prefHeight="20.0" prefWidth="265.0">
+                                 <font>
+                                    <Font name="Ubuntu" size="20.0" />
+                                 </font></Label>
+                              <JFXComboBox fx:id="remarksBox" layoutX="165.0" layoutY="14.0" prefHeight="37.0" prefWidth="265.0" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                     <font>
+                        <Font name="Ubuntu" size="15.0" />
+                     </font>
+                  </TitledPane>
+                  <TitledPane animated="false" collapsible="false" layoutX="501.0" layoutY="299.0" prefHeight="225.0" prefWidth="522.0" text="Payment">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="258.0" prefWidth="430.0">
+                           <children>
+                              <Label layoutX="15.0" layoutY="50.0" text="Balance :">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="15.0" layoutY="86.0" text="Amount Paid :">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="15.0" layoutY="124.0" text="Change : ">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="balanceField" disable="true" editable="false" layoutX="142.0" layoutY="42.0" prefHeight="27.0" prefWidth="363.0">
+                                 <font>
+                                    <Font name="Ubuntu" size="17.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXTextField fx:id="amountPaidField" layoutX="142.0" layoutY="78.0" prefHeight="27.0" prefWidth="363.0">
+                                 <font>
+                                    <Font name="Ubuntu" size="17.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXTextField fx:id="changeField" disable="true" editable="false" layoutX="142.0" layoutY="116.0" prefHeight="27.0" prefWidth="363.0">
+                                 <font>
+                                    <Font name="Ubuntu" size="17.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXButton id="capitanBtn" fx:id="submitButton" layoutX="188.0" layoutY="162.0" onAction="#printBrgyClearance" text="Print">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton id="capitanBtn" fx:id="saveButton" layoutX="76.0" layoutY="162.0" onAction="#saveBrgyClearanceRecord" text="Save">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton id="capitanBtn" fx:id="newClearanceBtn" layoutX="287.0" layoutY="162.0" onAction="#createNewBrgyClear" text="Create  New Clearance">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </JFXButton>
+                              <Label layoutX="15.0" layoutY="12.0" text="OR No. :">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="orNoField" layoutX="142.0" layoutY="4.0" prefHeight="27.0" prefWidth="363.0">
+                                 <font>
+                                    <Font name="Ubuntu" size="17.0" />
+                                 </font>
+                              </JFXTextField>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                     <font>
+                        <Font name="Ubuntu" size="15.0" />
+                     </font>
+                  </TitledPane>
+                  <TitledPane animated="false" collapsible="false" layoutX="22.0" layoutY="14.0" prefHeight="273.0" prefWidth="265.0" text="Image">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="247.0" prefWidth="223.0">
+                           <children>
+                              <JFXButton id="capitanBtn" fx:id="capture_btn" layoutX="52.0" layoutY="204.0" onAction="#capture_image" prefHeight="27.0" prefWidth="80.0" text="Capture">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton id="capitanBtn" fx:id="resetBtn" layoutX="132.0" layoutY="204.0" onAction="#resetWebcam" prefHeight="27.0" prefWidth="80.0" text="Reset">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </JFXButton>
+                              <ImageView fx:id="profilePicId" fitHeight="188.0" fitWidth="234.0" layoutX="14.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                                 <viewport>
+                                    <Rectangle2D />
+                                 </viewport>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                     <font>
+                        <Font name="Ubuntu" size="15.0" />
+                     </font>
+                  </TitledPane>
+               </children>
+            </Pane>
+            <Pane fx:id="busPane" prefHeight="535.0" prefWidth="1045.0" visible="false">
+               <children>
+                  <TitledPane collapsible="false" layoutX="66.0" prefHeight="310.0" prefWidth="406.0" text="Personal Information">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="223.0" prefWidth="404.0">
+                           <children>
+                              <Label layoutX="15.0" layoutY="19.0" prefHeight="29.0" prefWidth="134.0" text="Registration Type: ">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXComboBox fx:id="BCRegisterType" layoutX="169.0" layoutY="17.0" prefHeight="37.0" prefWidth="205.0" />
+                              <Label layoutX="15.0" layoutY="68.0" prefHeight="29.0" prefWidth="85.0" text="First Name:">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="BCFirstName" layoutX="169.0" layoutY="63.0" prefHeight="20.0" prefWidth="205.0">
+                                 <font>
+                                    <Font name="Ubuntu" size="20.0" />
+                                 </font>
+                              </JFXTextField>
+                              <Label layoutX="17.0" layoutY="119.0" prefHeight="29.0" prefWidth="82.0" text="Last Name:">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="BCLastName" layoutX="169.0" layoutY="114.0" prefHeight="20.0" prefWidth="205.0">
+                                 <font>
+                                    <Font name="Ubuntu" size="20.0" />
+                                 </font>
+                              </JFXTextField>
+                              <Label layoutX="17.0" layoutY="175.0" text="Middle Name:">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="BCMiddleName" layoutX="169.0" layoutY="164.0" prefHeight="20.0" prefWidth="205.0">
+                                 <font>
+                                    <Font name="Ubuntu" size="20.0" />
+                                 </font>
+                              </JFXTextField>
+                              <Label layoutX="17.0" layoutY="224.0" text="Business Name :">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="BCBusName" layoutX="169.0" layoutY="213.0" prefHeight="20.0" prefWidth="205.0">
+                                 <font>
+                                    <Font name="Ubuntu" size="20.0" />
+                                 </font>
+                              </JFXTextField>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                     <font>
+                        <Font name="Ubuntu" size="15.0" />
+                     </font>
+                  </TitledPane>
+                  <TitledPane collapsible="false" layoutX="488.0" prefHeight="310.0" prefWidth="461.0" text="Personal Information">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="34.0" layoutY="76.0" text="Type Of Business : ">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="BCBusType" layoutX="211.0" layoutY="65.0" prefHeight="20.0" prefWidth="205.0">
+                                 <font>
+                                    <Font name="Ubuntu" size="20.0" />
+                                 </font>
+                              </JFXTextField>
+                              <Label layoutX="35.0" layoutY="126.0" text="Building:">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXComboBox fx:id="BCbldgType" layoutX="211.0" layoutY="115.0" prefHeight="37.0" prefWidth="205.0" />
+                              <Label layoutX="37.0" layoutY="174.0" text="Forms Of Ownership : ">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXComboBox fx:id="BCOwnership" layoutX="211.0" layoutY="164.0" onAction="#BCOwnershipBox" prefHeight="37.0" prefWidth="205.0" />
+                              <Label layoutX="37.0" layoutY="225.0" text="Plate No. :">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="BCPlateNo" layoutX="211.0" layoutY="214.0" prefHeight="20.0" prefWidth="205.0">
+                                 <font>
+                                    <Font name="Ubuntu" size="20.0" />
+                                 </font>
+                              </JFXTextField>
+                              <Label layoutX="35.0" layoutY="28.0" text="Business Address:">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="BCBusAdd" layoutX="211.0" layoutY="17.0" prefHeight="20.0" prefWidth="205.0">
+                                 <font>
+                                    <Font name="Ubuntu" size="20.0" />
+                                 </font>
+                              </JFXTextField>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                     <font>
+                        <Font name="Ubuntu" size="15.0" />
+                     </font>
+                  </TitledPane>
+                  <TitledPane animated="false" collapsible="false" layoutX="66.0" layoutY="338.0" prefHeight="173.0" prefWidth="883.0" text="Payment">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="447.0" layoutY="26.0" text="Amount Paid :">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="BCAmountPaid" layoutX="593.0" layoutY="16.0" prefHeight="20.0" prefWidth="205.0">
+                                 <font>
+                                    <Font name="Ubuntu" size="20.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXButton id="capitanBtn" fx:id="printBC" layoutX="535.0" layoutY="107.0" onAction="#printBusClearance" text="Print">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton id="capitanBtn" fx:id="saBC" layoutX="447.0" layoutY="107.0" onAction="#saveBusClearanceRecord" text="Save">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </JFXButton>
+                              <Label layoutX="21.0" layoutY="20.0" text="Barangay:">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="BCBrgyField" disable="true" editable="false" layoutX="132.0" layoutY="9.0" prefHeight="20.0" prefWidth="300.0">
+                                 <font>
+                                    <Font name="Ubuntu" size="20.0" />
+                                 </font>
+                              </JFXTextField>
+                              <Label layoutX="21.0" layoutY="67.0" text="Control No:">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="BCCtrlNo" layoutX="133.0" layoutY="52.0" prefHeight="37.0" prefWidth="300.0">
+                                 <font>
+                                    <Font name="Ubuntu" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="22.0" layoutY="103.0" text="O.R. No. : ">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="BCORNo" layoutX="131.0" layoutY="92.0" prefHeight="20.0" prefWidth="300.0">
+                                 <font>
+                                    <Font name="Ubuntu" size="20.0" />
+                                 </font>
+                              </JFXTextField>
+                              <Label layoutX="447.0" layoutY="70.0" text="O.R. Date  : ">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="BCORDate" layoutX="589.0" layoutY="59.0" prefHeight="38.0" prefWidth="212.0">
+                                 <font>
+                                    <Font name="Ubuntu" size="20.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXButton id="capitanBtn" fx:id="newBusClearance" layoutX="622.0" layoutY="107.0" onAction="#createNewBusClearance" text="Create New Clearance">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                     <font>
+                        <Font name="Ubuntu" size="15.0" />
+                     </font>
+                  </TitledPane>
+               </children>
+            </Pane>
+            <Pane fx:id="workPane" prefHeight="546.0" prefWidth="1045.0" visible="false">
+               <children>
+                  <TitledPane collapsible="false" layoutX="252.0" prefHeight="310.0" prefWidth="363.0" text="Personal Information">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="241.0" prefWidth="404.0">
+                           <children>
+                              <Label layoutX="13.0" layoutY="19.0" prefHeight="29.0" prefWidth="85.0" text="First Name:">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="WCFirstName" layoutX="136.0" layoutY="14.0" prefHeight="20.0" prefWidth="205.0">
+                                 <font>
+                                    <Font name="Ubuntu" size="20.0" />
+                                 </font>
+                              </JFXTextField>
+                              <Label layoutX="13.0" layoutY="61.0" prefHeight="29.0" prefWidth="82.0" text="Last Name:">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="WCLastName" layoutX="139.0" layoutY="57.0" prefHeight="20.0" prefWidth="205.0">
+                                 <font>
+                                    <Font name="Ubuntu" size="20.0" />
+                                 </font>
+                              </JFXTextField>
+                              <Label layoutX="13.0" layoutY="110.0" text="Middle Name:">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="WCMiddleName" layoutX="139.0" layoutY="104.0" prefHeight="20.0" prefWidth="205.0">
+                                 <font>
+                                    <Font name="Ubuntu" size="20.0" />
+                                 </font>
+                              </JFXTextField>
+                              <Label layoutX="13.0" layoutY="156.0" text="Birthdate: ">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXDatePicker fx:id="WCBirthdate" layoutX="139.0" layoutY="149.0" prefHeight="24.0" prefWidth="205.0" />
+                              <Label layoutX="13.0" layoutY="191.0" text="Gender:">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXComboBox fx:id="WCGender" layoutX="139.0" layoutY="186.0" prefHeight="37.0" prefWidth="205.0" />
+                              <Label layoutX="13.0" layoutY="237.0" text="Address:">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="WCAdd" layoutX="139.0" layoutY="229.0" prefHeight="20.0" prefWidth="205.0">
+                                 <font>
+                                    <Font name="Ubuntu" size="20.0" />
+                                 </font>
+                              </JFXTextField>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                     <font>
+                        <Font name="Ubuntu" size="15.0" />
+                     </font>
+                  </TitledPane>
+                  <TitledPane collapsible="false" layoutX="635.0" prefHeight="310.0" prefWidth="394.0" text="Personal Information">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="14.0" layoutY="14.0" text="Age:">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="WCAge" layoutX="158.0" layoutY="7.0" prefHeight="20.0" prefWidth="205.0">
+                                 <font>
+                                    <Font name="Ubuntu" size="20.0" />
+                                 </font>
+                              </JFXTextField>
+                              <Label layoutX="14.0" layoutY="55.0" text="Civil Status:">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXComboBox fx:id="WCCivilStat" layoutX="158.0" layoutY="51.0" prefHeight="37.0" prefWidth="205.0" />
+                              <Label layoutX="14.0" layoutY="103.0" text="Citizenship:">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="WCCitizenship" layoutX="158.0" layoutY="94.0" prefHeight="20.0" prefWidth="205.0">
+                                 <font>
+                                    <Font name="Ubuntu" size="20.0" />
+                                 </font>
+                              </JFXTextField>
+                              <Label layoutX="14.0" layoutY="147.0" text="Applied Position:">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="WCAppliedPos" layoutX="158.0" layoutY="139.0" prefHeight="20.0" prefWidth="205.0">
+                                 <font>
+                                    <Font name="Ubuntu" size="20.0" />
+                                 </font>
+                              </JFXTextField>
+                              <Label layoutX="14.0" layoutY="190.0" text="Company Name:">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="WCcompanyName" layoutX="158.0" layoutY="183.0" prefHeight="20.0" prefWidth="205.0">
+                                 <font>
+                                    <Font name="Ubuntu" size="20.0" />
+                                 </font>
+                              </JFXTextField>
+                              <Label layoutX="14.0" layoutY="235.0" text="Company Address:">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="WCcompanyAdd" layoutX="158.0" layoutY="228.0" prefHeight="20.0" prefWidth="205.0">
+                                 <font>
+                                    <Font name="Ubuntu" size="20.0" />
+                                 </font>
+                              </JFXTextField>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                     <font>
+                        <Font name="Ubuntu" size="15.0" />
+                     </font>
+                  </TitledPane>
+                  <TitledPane animated="false" collapsible="false" layoutX="252.0" layoutY="325.0" prefHeight="188.0" prefWidth="775.0" text="Payment">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="23.0" layoutY="23.0" text="Remarks:">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="23.0" layoutY="52.0" text="Barangay:">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="WCBrgyField" disable="true" editable="false" layoutX="138.0" layoutY="51.0" prefHeight="17.0" prefWidth="220.0">
+                                 <font>
+                                    <Font name="Ubuntu" size="17.0" />
+                                 </font>
+                              </JFXTextField>
+                              <Label layoutX="23.0" layoutY="90.0" text="Control No:">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="WCCtrlNo" layoutX="138.0" layoutY="88.0" prefHeight="17.0" prefWidth="219.0">
+                                 <font>
+                                    <Font name="Ubuntu" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="23.0" layoutY="122.0" text="O.R. No. : ">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="WCOrNo" layoutX="137.0" layoutY="114.0" prefHeight="17.0" prefWidth="221.0">
+                                 <font>
+                                    <Font name="Ubuntu" size="17.0" />
+                                 </font>
+                              </JFXTextField>
+                              <Label layoutX="367.0" layoutY="25.0" text="Amount Paid :">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="WCAmountPaid" layoutX="514.0" layoutY="15.0" prefHeight="37.0" prefWidth="205.0" />
+                              <Label layoutX="367.0" layoutY="68.0" text="O.R. Date  : ">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="WCORDate" layoutX="511.0" layoutY="60.0" prefHeight="38.0" prefWidth="212.0">
+                                 <font>
+                                    <Font name="Ubuntu" size="20.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXButton id="capitanBtn" fx:id="saveWC" layoutX="367.0" layoutY="114.0" onAction="#saveWorkClearanceRecord" text="Save">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton id="capitanBtn" fx:id="printWC" layoutX="465.0" layoutY="114.0" onAction="#printWorkClearance" text="Print">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton id="capitanBtn" fx:id="newWorkClearance" layoutX="552.0" layoutY="114.0" onAction="#createNewWorkClearance" text="Create New Clearance">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXTextField fx:id="WCRemarks" layoutX="137.0" layoutY="13.0" prefHeight="38.0" prefWidth="222.0">
+                                 <font>
+                                    <Font name="Ubuntu" size="20.0" />
+                                 </font>
+                              </JFXTextField>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                     <font>
+                        <Font name="Ubuntu" size="15.0" />
+                     </font>
+                  </TitledPane>
+                  <TitledPane animated="false" collapsible="false" layoutX="30.0" prefHeight="249.0" prefWidth="205.0" text="Image">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="247.0" prefWidth="223.0">
+                           <children>
+                              <JFXButton id="capitanBtn" fx:id="WCCapture_btn" layoutX="22.0" layoutY="173.0" onAction="#WCcapture_image" prefHeight="27.0" prefWidth="80.0" text="Capture">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton id="capitanBtn" fx:id="WCResetBtn" layoutX="102.0" layoutY="173.0" onAction="#resetWebcam" prefHeight="27.0" prefWidth="80.0" text="Reset">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </JFXButton>
+                              <ImageView fx:id="WCProfilePic" fitHeight="155.0" fitWidth="186.0" layoutX="8.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                                 <viewport>
+                                    <Rectangle2D />
+                                 </viewport>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                     <font>
+                        <Font name="Ubuntu" size="15.0" />
+                     </font>
+                  </TitledPane>
+               </children>
+            </Pane>
+            <Pane fx:id="pedPane" prefHeight="546.0" prefWidth="1045.0" visible="false">
+               <children>
+                  <TitledPane collapsible="false" layoutX="81.0" prefHeight="333.0" prefWidth="406.0" text="Personal Information">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="307.0" prefWidth="404.0">
+                           <children>
+                              <Label layoutX="23.0" layoutY="7.0" prefHeight="29.0" prefWidth="85.0" text="First Name:">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="PCFirstName" layoutX="169.0" layoutY="5.0" prefHeight="17.0" prefWidth="205.0">
+                                 <font>
+                                    <Font name="Ubuntu" size="17.0" />
+                                 </font>
+                              </JFXTextField>
+                              <Label layoutX="23.0" layoutY="43.0" prefHeight="29.0" prefWidth="82.0" text="Last Name:">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="PCLastName" layoutX="168.0" layoutY="41.0" prefHeight="17.0" prefWidth="205.0">
+                                 <font>
+                                    <Font name="Ubuntu" size="17.0" />
+                                 </font>
+                              </JFXTextField>
+                              <Label layoutX="23.0" layoutY="85.0" text="Middle Name:">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="PCMiddleName" layoutX="168.0" layoutY="77.0" prefHeight="17.0" prefWidth="205.0">
+                                 <font>
+                                    <Font name="Ubuntu" size="17.0" />
+                                 </font>
+                              </JFXTextField>
+                              <Label layoutX="23.0" layoutY="120.0" text="Birthdate: ">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXDatePicker fx:id="PCBirthdate" layoutX="168.0" layoutY="113.0" prefHeight="17.0" prefWidth="205.0" />
+                              <Label layoutX="23.0" layoutY="152.0" text="Gender:">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXComboBox fx:id="PCGender" layoutX="169.0" layoutY="147.0" prefHeight="17.0" prefWidth="205.0" />
+                              <Label layoutX="23.0" layoutY="186.0" text="Address:">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="PCAdd" layoutX="169.0" layoutY="178.0" prefHeight="20.0" prefWidth="205.0">
+                                 <font>
+                                    <Font name="Ubuntu" size="17.0" />
+                                 </font>
+                              </JFXTextField>
+                              <Label layoutX="23.0" layoutY="226.0" text="Remarks:">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="PCRemarks" layoutX="169.0" layoutY="214.0" prefHeight="20.0" prefWidth="205.0">
+                                 <font>
+                                    <Font name="Ubuntu" size="17.0" />
+                                 </font>
+                              </JFXTextField>
+                              <Label layoutX="23.0" layoutY="262.0" text="Civil Status:">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXComboBox fx:id="PCCivilStat" layoutX="169.0" layoutY="257.0" prefHeight="17.0" prefWidth="205.0" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                     <font>
+                        <Font name="Ubuntu" size="15.0" />
+                     </font>
+                  </TitledPane>
+                  <TitledPane collapsible="false" layoutX="503.0" prefHeight="333.0" prefWidth="461.0" text="Personal Information">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="36.0" layoutY="50.0" text="Sidecar Color:">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="PCSideColor" layoutX="206.0" layoutY="44.0" prefHeight="20.0" prefWidth="205.0">
+                                 <font>
+                                    <Font name="Ubuntu" size="17.0" />
+                                 </font>
+                              </JFXTextField>
+                              <Label layoutX="36.0" layoutY="88.0" text="Bike Color:">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="PCBikeColor" layoutX="206.0" layoutY="80.0" prefHeight="20.0" prefWidth="205.0">
+                                 <font>
+                                    <Font name="Ubuntu" size="17.0" />
+                                 </font>
+                              </JFXTextField>
+                              <Label layoutX="36.0" layoutY="124.0" text="Trapal Color:">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="PCTrapColor" layoutX="206.0" layoutY="116.0" prefHeight="20.0" prefWidth="205.0">
+                                 <font>
+                                    <Font name="Ubuntu" size="17.0" />
+                                 </font>
+                              </JFXTextField>
+                              <Label layoutX="36.0" layoutY="160.0" text="R-Side:">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="PCRSide" layoutX="206.0" layoutY="152.0" prefHeight="20.0" prefWidth="205.0">
+                                 <font>
+                                    <Font name="Ubuntu" size="17.0" />
+                                 </font>
+                              </JFXTextField>
+                              <Label layoutX="36.0" layoutY="196.0" text="L-Side">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="PCCLside" layoutX="206.0" layoutY="188.0" prefHeight="20.0" prefWidth="205.0">
+                                 <font>
+                                    <Font name="Ubuntu" size="17.0" />
+                                 </font>
+                              </JFXTextField>
+                              <Label layoutX="36.0" layoutY="232.0" text="Front Mark:">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="PCFrontM" layoutX="206.0" layoutY="224.0" prefHeight="20.0" prefWidth="205.0">
+                                 <font>
+                                    <Font name="Ubuntu" size="17.0" />
+                                 </font>
+                              </JFXTextField>
+                              <Label layoutX="36.0" layoutY="268.0" text="Back Mark:">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="PCBackM" layoutX="206.0" layoutY="260.0" prefHeight="20.0" prefWidth="205.0">
+                                 <font>
+                                    <Font name="Ubuntu" size="17.0" />
+                                 </font>
+                              </JFXTextField>
+                              <Label layoutX="36.0" layoutY="16.0" text="Plate No: ">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="PCPlateNo" layoutX="206.0" layoutY="11.0" prefHeight="20.0" prefWidth="205.0">
+                                 <font>
+                                    <Font name="Ubuntu" size="17.0" />
+                                 </font>
+                              </JFXTextField>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                     <font>
+                        <Font name="Ubuntu" size="15.0" />
+                     </font>
+                  </TitledPane>
+                  <TitledPane animated="false" collapsible="false" layoutX="81.0" layoutY="344.0" prefHeight="188.0" prefWidth="883.0" text="Payment">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="23.0" layoutY="89.0" text="Barangay:">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="PCBrgtField" disable="true" editable="false" layoutX="150.0" layoutY="81.0" prefHeight="31.0" prefWidth="205.0">
+                                 <font>
+                                    <Font name="Ubuntu" size="16.0" />
+                                 </font>
+                              </JFXTextField>
+                              <Label layoutX="23.0" layoutY="126.0" text="Control No:">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="PCCtrlNo" layoutX="150.0" layoutY="116.0" prefHeight="37.0" prefWidth="205.0">
+                                 <font>
+                                    <Font name="Ubuntu" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="23.0" layoutY="22.0" text="O.R. No. : ">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="PCOrNo" layoutX="150.0" layoutY="9.0" prefHeight="17.0" prefWidth="205.0">
+                                 <font>
+                                    <Font name="Ubuntu" size="17.0" />
+                                 </font>
+                              </JFXTextField>
+                              <Label layoutX="447.0" layoutY="25.0" text="Amount Paid :">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="PCAmountPaid" layoutX="594.0" layoutY="15.0" prefHeight="17.0" prefWidth="205.0">
+                                 <font>
+                                    <Font name="Ubuntu" size="17.0" />
+                                 </font></JFXTextField>
+                              <Label layoutX="447.0" layoutY="61.0" text="O.R. Date  : ">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="PCORDate" disable="true" editable="false" layoutX="594.0" layoutY="54.0" prefHeight="17.0" prefWidth="205.0">
+                                 <font>
+                                    <Font name="Ubuntu" size="17.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXButton id="capitanBtn" fx:id="savePC" layoutX="447.0" layoutY="106.0" onAction="#savePedClearanceRecord" text="Save">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton id="capitanBtn" fx:id="printPC" layoutX="545.0" layoutY="106.0" onAction="#printPedClearance" text="Print">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton id="capitanBtn" fx:id="newPedClearance" layoutX="632.0" layoutY="106.0" onAction="#createNewPedClearance" text="Create New Clearance">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </JFXButton>
+                              <Label layoutX="23.0" layoutY="53.0" text="Expiration Date:">
+                                 <font>
+                                    <Font name="Ubuntu" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="PCExpire" disable="true" editable="false" layoutX="150.0" layoutY="45.0" prefHeight="32.0" prefWidth="205.0">
+                                 <font>
+                                    <Font name="Ubuntu" size="17.0" />
+                                 </font>
+                              </JFXTextField>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                     <font>
+                        <Font name="Ubuntu" size="15.0" />
+                     </font>
+                  </TitledPane>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <AnchorPane prefHeight="768.0" prefWidth="321.0" style="-fx-background-color: #20293c;">
+         <children>
+            <Pane prefHeight="60.0" prefWidth="321.0">
+               <children>
+                  <Label layoutX="122.0" layoutY="13.0" prefHeight="37.0" prefWidth="134.0" text="CAPITAN" textFill="WHITE">
+                     <font>
+                        <Font name="Ubuntu" size="26.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="65.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/city-logo.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane layoutY="56.0" prefHeight="667.0" prefWidth="321.0">
+               <children>
+                  <JFXButton fx:id="dashboardButton" graphicTextGap="10.0" layoutY="28.0" lineSpacing="10.0" onAction="#openHome" prefHeight="37.0" prefWidth="318.0" text="Dashboard" textFill="WHITE">
+                     <font>
+                        <Font name="Ubuntu" size="24.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="createNewButton" graphicTextGap="10.0" layoutX="-1.0" layoutY="73.0" lineSpacing="10.0" onAction="#createNewApp" prefHeight="42.0" prefWidth="318.0" text="Create New" textFill="WHITE">
+                     <font>
+                        <Font name="Ubuntu" size="24.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="recordsButton" graphicTextGap="10.0" layoutY="118.0" lineSpacing="10.0" onAction="#viewRecords" prefHeight="37.0" prefWidth="318.0" text="Records" textFill="WHITE">
+                     <font>
+                        <Font name="Ubuntu" size="24.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="configureBtn" graphicTextGap="10.0" layoutX="1.0" layoutY="563.0" lineSpacing="10.0" onAction="#configureSystem" prefHeight="45.0" prefWidth="318.0" text="Configure" textFill="WHITE">
+                     <font>
+                        <Font name="Ubuntu" size="24.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="signOutBtn" graphicTextGap="10.0" layoutY="608.0" lineSpacing="10.0" onAction="#signOutCapitan" prefHeight="45.0" prefWidth="321.0" text="Sign Out" textFill="WHITE">
+                     <font>
+                        <Font name="Ubuntu" size="24.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

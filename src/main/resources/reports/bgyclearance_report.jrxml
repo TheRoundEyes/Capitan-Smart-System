@@ -1,0 +1,669 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="bgyclearance_report" printOrder="Horizontal" pageWidth="612" pageHeight="792" columnWidth="612" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" isIgnorePagination="true" uuid="61158eff-898b-4b20-b0f9-9204f3ac54e4">
+	<property name="ireport.zoom" value="1.7715610000000017"/>
+	<property name="ireport.x" value="99"/>
+	<property name="ireport.y" value="361"/>
+	<parameter name="SURNAME" class="java.lang.String"/>
+	<parameter name="FIRSTNAME" class="java.lang.String"/>
+	<parameter name="MIDDLENAME" class="java.lang.String"/>
+	<parameter name="GENDER" class="java.lang.String"/>
+	<parameter name="BIRTHDATE" class="java.lang.String"/>
+	<parameter name="AGE" class="java.lang.String"/>
+	<parameter name="CITIZENSHIP" class="java.lang.String"/>
+	<parameter name="CIVIL_STATUS" class="java.lang.String"/>
+	<parameter name="ADDRESS" class="java.lang.String"/>
+	<parameter name="BARANGAY" class="java.lang.String"/>
+	<parameter name="CITY" class="java.lang.String"/>
+	<parameter name="REMARKS" class="java.lang.String"/>
+	<parameter name="PROFILE_IMAGE" class="java.awt.Image"/>
+	<parameter name="BARANGAY_CAPT" class="java.lang.String"/>
+	<parameter name="BARANGAY_SEC" class="java.lang.String"/>
+	<parameter name="BARANGAY_TRES" class="java.lang.String"/>
+	<parameter name="BARANGAY_KAGAWAD1" class="java.lang.String"/>
+	<parameter name="BARANGAY_KAGAWAD2" class="java.lang.String"/>
+	<parameter name="BARANGAY_KAGAWAD3" class="java.lang.String"/>
+	<parameter name="BARANGAY_KAGAWAD4" class="java.lang.String"/>
+	<parameter name="BARANGAY_KAGAWAD5" class="java.lang.String"/>
+	<parameter name="BARANGAY_KAGAWAD6" class="java.lang.String"/>
+	<parameter name="BARANGAY_KAGAWAD7" class="java.lang.String"/>
+	<parameter name="CURRENT_DATE" class="java.lang.String"/>
+	<parameter name="CONTROL_NO" class="java.lang.String"/>
+	<parameter name="PURPOSE" class="java.lang.String"/>
+	<parameter name="CURRENT_ADMIN" class="java.lang.String"/>
+	<parameter name="FULL_NAME" class="java.lang.String"/>
+	<background>
+		<band splitType="Prevent"/>
+	</background>
+	<title>
+		<band height="120" splitType="Immediate"/>
+	</title>
+	<pageHeader>
+		<band height="37" splitType="Immediate">
+			<staticText>
+				<reportElement x="422" y="5" width="70" height="12" uuid="b3690515-2cc4-42aa-ba0c-f16da5bc59a9"/>
+				<textElement>
+					<font fontName="STZhongsong" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Control No. :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="422" y="18" width="32" height="12" uuid="ac275b25-5ba6-407b-8a48-cd0894ac9e84"/>
+				<textElement>
+					<font fontName="STZhongsong" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="492" y="5" width="84" height="12" uuid="12bc462b-2fdf-4d48-b20b-c097059c05bb"/>
+				<textElement>
+					<font fontName="STZhongsong" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{CONTROL_NO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="492" y="17" width="100" height="12" uuid="b84848e0-2295-4be9-a74b-b1f4353c8bf1"/>
+				<textElement>
+					<font fontName="STZhongsong" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{CURRENT_DATE}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="50" splitType="Immediate">
+			<line>
+				<reportElement x="173" y="0" width="1" height="50" uuid="3a5a4f96-f25c-44a2-8096-6f69be63abd5"/>
+			</line>
+			<staticText>
+				<reportElement x="243" y="23" width="249" height="27" uuid="9d37e488-2d61-457b-b28e-6c0a0578c80e"/>
+				<textElement textAlignment="Justified">
+					<font fontName="STZhongsong" size="20" isBold="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[C E R T I F I C A T I O N]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="249" splitType="Immediate">
+			<staticText>
+				<reportElement x="199" y="0" width="375" height="47" uuid="971560d9-f8b1-4a09-b81b-dc6eba775ebf"/>
+				<textElement>
+					<font fontName="STZhongsong" size="10"/>
+				</textElement>
+				<text><![CDATA[This is to certify that the person whose name, signature and thumbmarks appear below has requested clearance from this Barangay and verification revealed the following personal circumstances:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="173" y="0" width="1" height="249" uuid="8c8114c5-1b1d-42b6-905e-66fdaf5260f4"/>
+			</line>
+			<staticText>
+				<reportElement x="186" y="60" width="60" height="12" uuid="62615824-2330-4317-9028-651667c7dc00"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="STZhongsong" size="9"/>
+				</textElement>
+				<text><![CDATA[Surname:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="186" y="76" width="60" height="12" uuid="992a8266-bee0-48ad-aa65-680145605989"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="STZhongsong" size="9"/>
+				</textElement>
+				<text><![CDATA[First Name:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="185" y="93" width="62" height="12" uuid="4b02f89f-8d0c-4fcc-9166-d9a1abf6f4b1"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="STZhongsong" size="9"/>
+				</textElement>
+				<text><![CDATA[Middle Name:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="186" y="110" width="60" height="12" uuid="650b9ee2-8337-455a-bc1e-0ff6ae1b0201"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="STZhongsong" size="9"/>
+				</textElement>
+				<text><![CDATA[Gender:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="186" y="127" width="60" height="12" uuid="aa00fdb4-a723-4240-9858-f402276faeee"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="STZhongsong" size="9"/>
+				</textElement>
+				<text><![CDATA[Birthdate:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="186" y="143" width="28" height="12" uuid="23328202-5c25-4431-831e-89d60f2cb857"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="STZhongsong" size="9"/>
+				</textElement>
+				<text><![CDATA[Age:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="186" y="159" width="58" height="12" uuid="7b011264-d577-4b72-a548-088a65f9a212"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="STZhongsong" size="9"/>
+				</textElement>
+				<text><![CDATA[Citizenship:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="186" y="174" width="58" height="12" uuid="512fcc7a-acd8-4bcd-a627-3a8b22fcb969"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="STZhongsong" size="9"/>
+				</textElement>
+				<text><![CDATA[Civil Status:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="186" y="189" width="45" height="12" uuid="04951db8-9cf2-4177-b8ba-5411b498d99a"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="STZhongsong" size="9"/>
+				</textElement>
+				<text><![CDATA[Address:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="254" y="60" width="161" height="12" uuid="3963055a-3f09-48cf-a4d0-edde3f542b20"/>
+				<textElement markup="none">
+					<font fontName="STZhongsong" size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{SURNAME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="254" y="76" width="162" height="12" uuid="e2cfd1a7-236a-4c8c-882d-8777300b395d"/>
+				<textElement>
+					<font fontName="STZhongsong" size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{FIRSTNAME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="254" y="93" width="162" height="12" uuid="8372d635-12f0-4438-b8a4-f64d13d45060"/>
+				<textElement>
+					<font fontName="STZhongsong" size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{MIDDLENAME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="254" y="110" width="162" height="12" uuid="2a84856d-c4d5-4035-8108-82be3b5a81f8"/>
+				<textElement>
+					<font fontName="STZhongsong" size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{GENDER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="253" y="127" width="164" height="12" uuid="7b6d9eb4-ee67-412f-8c1c-bed31890a034"/>
+				<textElement>
+					<font fontName="STZhongsong" size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{BIRTHDATE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="253" y="143" width="162" height="12" uuid="d3bcbc8f-b0d3-4de5-af71-5c5b840aed2c"/>
+				<textElement>
+					<font fontName="STZhongsong" size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{AGE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="254" y="159" width="168" height="12" uuid="a3db0b4b-e8dd-45ee-9a3f-c58026d0eee9"/>
+				<textElement>
+					<font fontName="STZhongsong" size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{CITIZENSHIP}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="254" y="189" width="168" height="12" uuid="577e9720-ccdd-42cb-9b6c-4d7fc0abea1b"/>
+				<textElement>
+					<font fontName="STZhongsong" size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ADDRESS}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="432" y="166" width="65" height="74" uuid="6a124035-f491-4bcd-b448-ea770e8d615f"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="516" y="166" width="65" height="74" uuid="ecc2ea91-2432-454a-a6ab-afa82fdca759"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="186" y="204" width="60" height="12" uuid="f3e7ca2d-b8e3-4118-9926-baa7560d6cfb"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="STZhongsong" size="9"/>
+				</textElement>
+				<text><![CDATA[Barangay:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="254" y="204" width="168" height="12" uuid="5f754024-843d-4411-85d5-8e4b875df81c"/>
+				<textElement>
+					<font fontName="STZhongsong" size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{BARANGAY}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="186" y="219" width="27" height="12" uuid="b7b441db-3033-4207-8efb-7c886eb74a06"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="STZhongsong" size="9"/>
+				</textElement>
+				<text><![CDATA[City:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="254" y="219" width="168" height="12" uuid="2dc3290e-6720-48bb-ae88-d2374e764fe7"/>
+				<textElement>
+					<font fontName="STZhongsong" size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{CITY}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="186" y="236" width="44" height="12" uuid="93926721-0e5a-4ef9-98c7-5230480b71b5"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="STZhongsong" size="9"/>
+				</textElement>
+				<text><![CDATA[Remarks:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="254" y="236" width="168" height="12" uuid="c8b7dfdb-45f1-400b-bf8f-2b95bd174ba0"/>
+				<textElement>
+					<font fontName="STZhongsong" size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{REMARKS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="254" y="174" width="168" height="12" uuid="198927a5-56a4-445e-9750-3c8a82d97ccc"/>
+				<textElement>
+					<font fontName="STZhongsong" size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{CIVIL_STATUS}]]></textFieldExpression>
+			</textField>
+			<image scaleImage="FillFrame" hAlign="Center">
+				<reportElement x="454" y="60" width="109" height="99" uuid="66a0dc7e-7f79-414d-8d24-8566ef9da781"/>
+				<imageExpression><![CDATA[$P{PROFILE_IMAGE}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="13" y="150" width="164" height="15" uuid="fd017a86-6469-46f8-b7d1-101f036af9a6"/>
+				<textElement textAlignment="Left"/>
+				<text><![CDATA[Sangguniang Barangay Members :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="14" y="187" width="142" height="9" uuid="c2bbb3d9-0c94-45a6-b140-b903c1cdff78"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[Chairman, Committee on Appropriation]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="14" y="194" width="159" height="9" uuid="74b9196f-6cd9-4929-bc0e-3ef67144943a"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[Chairman, Committee on Youth & Sports Development]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="14" y="201" width="142" height="9" uuid="57c76f53-3cae-4f28-a411-5c21ca3452bd"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[Chairman, Committee on Women & Family]]></text>
+			</staticText>
+			<image>
+				<reportElement positionType="Float" x="31" y="0" width="134" height="111" uuid="0dbe95f4-2b7e-4672-8ce1-37c280890567"/>
+				<imageExpression><![CDATA["C:\\Users\\Marvin\\Documents\\NetBeansProjects\\Capitan\\src\\main\\resources\\img\\kap dondon.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="15" y="226" width="164" height="8" uuid="13ae3b01-9b0e-4fce-9b48-bd094662cb80"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[Chairman, Committee on Health & Sanitation]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="15" y="233" width="148" height="8" uuid="efc1ea59-4102-4112-9fbf-c711db42307c"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[Chairman, Committee on Environmental Protection]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="35" y="175" width="139" height="12" uuid="3a0cf0ec-c9c2-4312-b2ce-34e90af1c019"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{BARANGAY_KAGAWAD1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="35" y="215" width="139" height="12" uuid="42fe7aa7-3a48-441a-97be-e9811b56cfac"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{BARANGAY_KAGAWAD2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="16" y="111" width="161" height="12" uuid="5a0fcf9a-15c3-439c-a186-555d73c4b7a5"/>
+				<textElement textAlignment="Center">
+					<font size="9" isBold="true" isUnderline="true" isStrikeThrough="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{BARANGAY_CAPT}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="50" y="123" width="88" height="16" uuid="dd7f5eb7-5a55-4c46-ab19-f57198adef86"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Punong Barangay]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="15" y="215" width="21" height="12" uuid="feb6a9b0-385c-46d4-b998-3e1161082596"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Hon.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="15" y="175" width="21" height="12" uuid="6ce57482-97c8-45ba-9de2-39b647eb5b78"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Hon.]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="267" splitType="Immediate">
+			<line>
+				<reportElement x="193" y="162" width="168" height="1" uuid="31122d4b-f3d1-4295-990d-7934e2d4d74d"/>
+			</line>
+			<staticText>
+				<reportElement x="222" y="163" width="95" height="14" uuid="623048f3-bb22-4d6a-a3b4-764c2822904e"/>
+				<textElement textAlignment="Center">
+					<font fontName="STZhongsong" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Front Desk Clerk]]></text>
+			</staticText>
+			<line>
+				<reportElement x="430" y="161" width="168" height="1" uuid="b7d954a5-6f14-47c7-ac19-68d21d363585"/>
+			</line>
+			<staticText>
+				<reportElement x="465" y="163" width="106" height="14" uuid="1c14619e-1e6f-45f3-bdff-cf62c998e1ce"/>
+				<textElement textAlignment="Center">
+					<font fontName="STZhongsong" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Barangay Secretary]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="194" width="95" height="14" uuid="ed9f64c9-1bd6-4afc-ada3-cb313613f6c6"/>
+				<textElement>
+					<font fontName="STZhongsong" isBold="true"/>
+				</textElement>
+				<text><![CDATA[APPROVED BY:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="337" y="238" width="95" height="14" uuid="fd8bbfa9-5454-41e7-b400-f023e9eee0d0"/>
+				<textElement>
+					<font fontName="STZhongsong"/>
+				</textElement>
+				<text><![CDATA[Punong Barangay]]></text>
+			</staticText>
+			<line>
+				<reportElement x="300" y="233" width="168" height="1" uuid="d053ed83-2e4f-4da5-848c-57418015c5f2"/>
+			</line>
+			<staticText>
+				<reportElement x="413" y="124" width="171" height="14" uuid="93b2e3bf-ff15-446e-8b7f-600a86fe6214"/>
+				<textElement textAlignment="Center">
+					<font fontName="STZhongsong" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[CERTIFIED TRUE AND CORRECT.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="187" y="124" width="73" height="14" uuid="b5deccaf-9ed0-4497-a853-31727025c1e1"/>
+				<textElement textAlignment="Center">
+					<font fontName="STZhongsong" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Processed by:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="186" y="47" width="170" height="14" uuid="fa4c0d2e-7814-4aa8-97a8-8429a522b885"/>
+				<textElement textAlignment="Center">
+					<font fontName="STZhongsong" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[ISSUED FOR THE PURPOSE OF:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="395" y="78" width="37" height="14" uuid="9fd28a84-9ee5-4a32-86c9-fbf1aa417e93"/>
+				<textElement textAlignment="Center">
+					<font fontName="STZhongsong" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Specify]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="326" y="19" width="158" height="14" uuid="d8f58825-571f-40b6-a0c1-c417aaa02f75"/>
+				<textElement textAlignment="Center">
+					<font fontName="STZhongsong" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Applicants Name and Signature]]></text>
+			</staticText>
+			<line>
+				<reportElement x="173" y="-29" width="1" height="292" uuid="583a4663-b1d4-4fee-b5b7-4dba2cdca025"/>
+			</line>
+			<staticText>
+				<reportElement x="15" y="3" width="164" height="8" uuid="0b204494-b46b-440e-aca2-ebdecb6bcbf9"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[Chairman, Committee on Ways & Means]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="15" y="10" width="181" height="8" uuid="49a34f62-f742-4fec-a270-57420ec71d19"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[Chairman, Committee on Human Rights]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="15" y="109" width="164" height="8" uuid="969e388d-0698-4500-9be5-fd9dfd01f993"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[Chairman, Committee on Social Services]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="15" y="116" width="181" height="8" uuid="13ad8884-7520-42e6-98e6-aa67df7b1050"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[Chairman, Committee on Public Works & Infrastructure]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="15" y="39" width="148" height="8" uuid="e934530f-738a-404d-930e-2b7be5f89497"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[Chairman, Committee on PO's, NGO's & Sectoral Group]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="15" y="47" width="164" height="8" uuid="48fd1da5-7922-4902-beca-624e52c94543"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[Chairman, Committee on Tourism and Culture]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="15" y="77" width="164" height="8" uuid="69807bf9-49e6-4536-96a3-f72f4ef7cfb1"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[Chairman, Committee on Public Safety & Order]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="15" y="84" width="181" height="8" uuid="932e9d47-be43-43af-b315-272cb96706ec"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[Chairman, Committee on Urban Poor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="15" y="143" width="145" height="8" uuid="0410fb02-cd84-468b-bb2b-a0d4dc28537b"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[Chairman, Committee on Livelihood]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="15" y="151" width="145" height="8" uuid="21e0644a-40ee-41eb-801e-6f3e2ddc89d7"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[Chairman, Committee on Education]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="15" y="205" width="145" height="8" uuid="4fc20080-5c0e-4094-ba25-3cb2567469ee"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[Barangay Treasurer]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="15" y="175" width="145" height="8" uuid="7172a2c5-4705-4f6f-bf4f-f2482cc98e75"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[Barangay Sectretary]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="35" y="-8" width="139" height="12" uuid="2ead1c9b-0763-4701-bf40-d8964aa992fd"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{BARANGAY_KAGAWAD3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="35" y="27" width="135" height="12" uuid="1593e883-705f-4909-8747-ebfed92e89d4"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{BARANGAY_KAGAWAD4}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="35" y="66" width="135" height="12" uuid="02bd265b-47fb-407b-bc00-24c83e21f65d"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{BARANGAY_KAGAWAD5}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="35" y="98" width="135" height="12" uuid="bb71f669-4d7f-4225-ade1-a8065aeb0590"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{BARANGAY_KAGAWAD6}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="35" y="131" width="138" height="12" uuid="e823ab65-8cfd-4e32-8936-0e99d6dd8854"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{BARANGAY_KAGAWAD7}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="15" y="164" width="111" height="12" uuid="ce043ddd-edc5-4cb4-a47d-1dcba765545e"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{BARANGAY_SEC}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="15" y="194" width="111" height="12" uuid="c785e828-3b09-439d-a4b6-751602dc87ef"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{BARANGAY_TRES}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="15" y="66" width="21" height="12" uuid="b63d5584-389d-4166-bbde-b64b32a73f0a"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Hon.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="15" y="27" width="21" height="12" uuid="f1b388e6-5c5e-428b-89b5-f354a19f35fa"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Hon.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="15" y="98" width="21" height="12" uuid="ffb788e0-6198-4d6e-a008-475e14d661f7"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Hon.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="15" y="131" width="21" height="12" uuid="178c9104-992e-41c4-aee3-16afeea11e6d"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Hon.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="269" y="221" width="234" height="12" uuid="33744326-6e4f-4849-9e08-296ea30d3da9"/>
+				<textElement textAlignment="Center">
+					<font fontName="STZhongsong" size="9" isBold="true" isUnderline="false" isStrikeThrough="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{BARANGAY_CAPT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="465" y="149" width="111" height="12" uuid="52f3d386-64f8-4633-833e-ec290eca176c"/>
+				<textElement textAlignment="Center">
+					<font fontName="STZhongsong" size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{BARANGAY_SEC}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="15" y="-8" width="21" height="12" uuid="0d4e6fdd-8084-4c94-b455-f43fc0003404"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Hon.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="224" y="149" width="100" height="12" uuid="12c8692f-78c4-4fe2-9f26-61a0960817c5"/>
+				<textElement textAlignment="Center">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{CURRENT_ADMIN}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="327" y="66" width="175" height="12" uuid="897833de-5da2-4ad0-be9e-87f97f0a07d7"/>
+				<textElement textAlignment="Center">
+					<font fontName="STZhongsong" size="9" isBold="true" isUnderline="true" isStrikeThrough="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{PURPOSE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="310" y="6" width="190" height="12" uuid="788c05fa-40f5-4338-969d-232c74e9094a"/>
+				<textElement textAlignment="Center">
+					<font fontName="STZhongsong" size="9" isBold="true" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{FULL_NAME}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="46" splitType="Immediate">
+			<line>
+				<reportElement x="-5" y="-4" width="627" height="1" uuid="ee0d25c0-25ca-48fa-a0ca-dea2bb23c14e"/>
+			</line>
+			<staticText>
+				<reportElement x="178" y="3" width="187" height="13" uuid="7238acbb-a3b0-45ea-b2e3-7029d4535306"/>
+				<textElement textAlignment="Justified">
+					<font fontName="STZhongsong" size="9"/>
+				</textElement>
+				<text><![CDATA[NOT VALID WITHOUT BARANGAY SEAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="149" y="16" width="264" height="13" uuid="468adae6-e4c2-4f12-8b5b-f7c4ad9f89f9"/>
+				<textElement textAlignment="Justified">
+					<font fontName="STZhongsong" size="9"/>
+				</textElement>
+				<text><![CDATA[This CLEARANCE is valid for 90 days from date of issue]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="19" splitType="Immediate"/>
+	</summary>
+</jasperReport>
